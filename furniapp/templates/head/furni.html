@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+<br><br>	
+<div class="row">
+{% for h in homes %}
+	<div class="card-deck col-sm-3">
+	<div class="card">
+  		<a href="">
+  			<img class="card-img-top img-responsive" width="300" height="200" src="{{ h.img.url }}" alt="Card image cap">
+      	</a>
+  	<div class="card-footer">
+    <h5 class="card-title"> &nbsp&nbsp{{ h.name }}</h5>
+    </div>
+ </div>
+</div> 
+{% endfor %}
+</div>
+
+
+{% endblock %}

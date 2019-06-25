@@ -1,0 +1,51 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+	<br>
+	<br>
+
+	<div class="card-deck">
+   <div class="card">
+    <img class="card-img-top" src="{{worker.img }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Worker Details</h5>
+    
+    <div class="alert alert-secondary" role="alert">
+  		Address :   <b>{{worker.name}}</b>
+	</div>
+
+	<div class="alert alert-secondary" role="alert">
+  		City :   <b>{{worker.city}}</b>
+	</div>
+
+	<div class="alert alert-secondary" role="alert">
+  		Experience :  <b> {{worker.Experience}} </b>
+	</div>
+
+	<div class="alert alert-secondary" role="alert">
+  		Address :   <b>{{worker.address}}</b>
+	</div>
+
+	<div class="alert alert-secondary" role="alert">
+  		Description :  <b> {{worker.desc}} </b>
+	</div>
+
+	<div class="alert alert-secondary" role="alert">
+  		Mobile no. :   <b>{{worker.mobile}}</b>
+	</div>
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"></small>
+    </div>
+  </div>
+ 
+	</div>
+
+
+{% endblock %}

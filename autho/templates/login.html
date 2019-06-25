@@ -1,0 +1,46 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<br>
+
+<div class="container">
+ <div class="jumbotron">
+<form method="POST">
+	{% csrf_token %}
+  <div class="form-group col-sm-4">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" name="username" class="form-control" required="True" id="exampleInputEmail1" placeholder="Enter username">
+   
+  </div>
+  <div class="form-group col-sm-4">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" name="password" class="form-control" required="True" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+<pre>If You Don't Have Account <a class="btn btn-dark" href="/auth/reg/">Register</a></pre>
+</div>
+</div>
+{% endblock %}        
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<form method="post">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username">
+		  <label for="password">Password:</label>
+          <input type="password" name="password" placeholder="Password">
+		  <input type="submit" name="" value="Login">
+</form>
+</body>
+</html> -->

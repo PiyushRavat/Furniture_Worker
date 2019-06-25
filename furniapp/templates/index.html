@@ -1,0 +1,99 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+<!-- main Home content -->
+<br>
+<div class="card-deck">
+  <div class="card">
+    <a href="furni">
+    	<img class="card-img-top img-responsive" width="200" height="210" src="https://www.mocka.co.nz/media/product/b7/nursery-furniture-starter-package-1c-x.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Furniture</h5>
+    </div>
+    </a>
+    
+  </div>
+
+  <div class="card">
+  	<a href="">
+  		 <img class="card-img-top" width="200" height="210" src="https://images.designtrends.com/wp-content/uploads/2016/02/16101502/Armchair-Furniture-Design-Logo.jpg" alt="Card image cap">
+    <div class="card-body">
+      	<h5 class="card-title">Uniq Design</h5>
+    </div>
+  	</a>
+   
+  </div>
+  <div class="card">
+  	<a href="worker">
+  		<img class="card-img-top" width="200" height="210" src="https://t4.ftcdn.net/jpg/00/68/05/07/500_F_68050725_RtmEBTkJJgk3VxJMbxTo6WU29z0YXL1o.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Workers</h5>
+    </div>
+  	</a>
+  </div>
+  <br>
+  <div class="card">
+  	<a href="cal">
+  		<img class="card-img-top" width="200" height="210" src="https://vitalmechanical.com/wp-content/uploads/2016/03/estimate.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Get Estimate</h5>
+    </div>
+  	</a>
+  </div>	
+</div>
+<br><br>
+
+<!--SlideShow-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-responsive" src="https://cdn10.bigcommerce.com/s-dim5iwlwbv/product_images/theme_images/slideshow-bedrooms-042618__16501.jpg?t=1547223950" alt="Furniture-hadline" width="1100" height="400">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.hoteldesignfurniture.com/userdata/immagini/articoli/1200x580/eplace-dvo42473_72681.jpg" alt="Furniture-hadline" width="1100" height="400">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.shopify.com/s/files/1/0437/0225/files/Vantage_Shopify_Slideshow_1999x1545_JL_4_06768b0d-ce10-4665-9b28-8728970e153f_2000x.jpg?v=1522384217" alt="custom" width="1100" height="400">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<br><br>
+
+
+<!-- Home product layput-->
+<div class="row">
+{% for h in homes %}
+<div class="card-deck col-sm-3">
+<div class="card">
+  	<a href="">
+  		<img class="card-img-top img-responsive" width="300" height="200" src="{{ h.img.url }}" alt="Card image cap">
+      
+  	</a>
+  	<div class="card-footer">
+      <h5 class="card-title"> &nbsp&nbsp{{ h.name }}</h5>
+    </div>
+ </div>
+</div> 
+{% endfor %}
+</div>
+
+<br><br>
+{% endblock %}
